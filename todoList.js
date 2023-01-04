@@ -83,6 +83,7 @@ class TodoList {
 
         todos.forEach(todo => {
             const todoLi = document.createElement('li');
+            todoLi.id = todo.id || 0;
 
             const checkbox = document.createElement('input');
             checkbox.type = 'checkbox';
@@ -95,13 +96,18 @@ class TodoList {
             button.innerText = 'Delete';
             button.classList.add('delete-btn');
 
-            todoLi.id = todo.id || 0;
-            const todoText = todo.text || '';
-            const todoCategoryName = this.getCategoryName(todo.categoryId || 0);
-            todoLi.innerText = todoText + ' --- ' + todoCategoryName;
+            const todoSpan = document.createElement('span');
+            todoSpan.classList.add('todoSpan');
+            todoSpan.innerText = todo.text || '';
 
-            todoLi.appendChild(button);
+            const todoCategorySpan = document.createElement('span');
+            todoCategorySpan.classList.add('todoCategorySpan');
+            todoCategorySpan.innerText = this.getCategoryName(todo.categoryId || 0);
+
             todoLi.appendChild(checkbox);
+            todoLi.appendChild(todoSpan);
+            todoLi.appendChild(todoCategorySpan);
+            todoLi.appendChild(button);
             todoUl.appendChild(todoLi);
         });
     }

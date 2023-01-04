@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todo App</title>
+
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
     <div id="app">
@@ -16,7 +18,20 @@
     
             <input type="date" id="todo_date">
     
-            <ul id="todoList"></ul>
+            <ul id="todoList">
+                <li>
+                    <span class="todoSpan">Todo 1</span>
+                    <span class="todoCategorySpan">Category 1</span>
+                    <button class="delete-btn">Delete</button>
+                    <input type="checkbox">
+                </li>
+                <li>
+                    <span class="todoSpan">Todo 2</span>
+                    <span class="todoCategorySpan">Category 2</span>
+                    <button class="delete-btn">Delete</button>
+                    <input type="checkbox" class="completed" checked>
+                </li>
+            </ul>
         </div>
 
         <div id="categoryCol">
@@ -29,7 +44,16 @@
                 <option value="category_desc">Category Desc</option>
             </select>
     
-            <ul id="categoryList"></ul>
+            <ul id="categoryList">
+                <li>
+                    <span class="categorySpan">Category 1</span>
+                    <button class="delete-btn">Delete</button>
+                </li>
+                <li>
+                    <span class="categorySpan">Category 2</span>
+                    <button class="delete-btn">Delete</button>
+                </li>
+            </ul>
         </div>
     </div>
 

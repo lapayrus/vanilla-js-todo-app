@@ -1,0 +1,121 @@
+/* reset styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* set font and base styles */
+  body {
+    font-family: sans-serif;
+    color: #333;
+  }
+  
+  /* apply a grid layout to the app container */
+  #app {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  
+  /* style the todo form */
+  #todoForm {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+  
+  #todoForm input[type="text"] {
+    font-size: 16px;
+    border: 1px solid #ddd;
+    padding: 8px;
+    width: calc(100% - 128px);
+    margin-right: 16px;
+  }
+  
+  #todoForm select {
+    font-size: 16px;
+    border: 1px solid #ddd;
+    padding: 8px;
+    width: 100px;
+  }
+  
+  /* style the todo list */
+  #todoList {
+    list-style: none;
+  }
+  
+  #todoList li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+  
+  #todoList .todoSpan {
+    font-size: 16px;
+    margin-right: 16px;
+  }
+  
+  #todoList .todoCategorySpan {
+    font-size: 14px;
+    color: #777;
+    margin-right: 16px;
+  }
+  
+  #todoList .delete-btn {
+    font-size: 14px;
+    background: transparent;
+    border: 1px solid #ddd;
+    padding: 4px 8px;
+    cursor: pointer;
+  }
+  
+  #todoList input[type="checkbox"] {
+    margin-left: auto;
+  }
+  
+  /* style the category form */
+  #categoryForm {
+    margin-bottom: 16px;
+  }
+  
+  #categoryForm input[type="text"] {
+    font-size: 16px;
+    border: 1px solid #ddd;
+    padding: 8px;
+    width: 100%;
+  }
+  
+  /* style the category list */
+  #categoryList {
+    list-style: none;
+  }
+  
+  #categoryList li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+  
+  #categoryList .categorySpan {
+    font-size: 16px;
+    margin-right: 16px;
+  }
+  
+  #categoryList .delete-btn {
+    font-size: 14px;
+    background: transparent;
+    border: 1px solid #ddd;
+    padding: 4px 8px;
+    cursor: pointer;
+  }
+  
+  /* style the sort select */
+  #category_sort {
+    font-size: 16px;
+    border: 1px solid #ddd;
+    padding: 8px;
+    width: 100%;
+    margin-bottom: 16px;
+  }
+  

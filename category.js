@@ -26,14 +26,17 @@ class CategoryList {
 
         categories.forEach(category => {
             const catLi = document.createElement('li');
+            catLi.id = category.id || 0;
 
             const button = document.createElement('button');
             button.innerText = 'Delete';
             button.classList.add('delete-btn');
 
-            catLi.id = category.id || 0;
-            catLi.innerText = (category.name || '') + ' ----- ';
+            const categorySpan = document.createElement('span');
+            categorySpan.classList.add('categorySpan');
+            categorySpan.innerText = category.name || '';
 
+            catLi.appendChild(categorySpan);
             catLi.appendChild(button);
             catUl.appendChild(catLi);
         });
